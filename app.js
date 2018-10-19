@@ -1,7 +1,7 @@
 console.log('JS loaded');
 document.addEventListener('DOMContentLoaded', () => {
-  const main_form = document.querySelector('#new-item-form');
-  main_form.addEventListener('submit', handleForm);
+  const new_item_form = document.querySelector('#new-item-form');
+  new_item_form.addEventListener('submit', handleForm);
 });
 
 const handleForm = function (event) {
@@ -21,14 +21,14 @@ const handleForm = function (event) {
     const fishList = document.querySelector('#fish-ul');
     fishList.appendChild(newListItem);
 
-  // const newListItem = document.createElement('li');
-  //   newListItem.textContent = `Scientific name: ${ this.scientific_name.value }`;
-  //   const fishList = document.querySelector('#fish-ul');
-  //   fishList.appendChild(newListItem);
-  //
-  // const newListItem = document.createElement('li');
-  //   newListItem.textContent = `Environment: ${ this.environment.value }`;
-  //   const fishList = document.querySelector('#fish-ul');
-  //   fishList.appendChild(newListItem);
+  const newListItem2 = document.createElement('li');
+    newListItem2.textContent = `Scientific name: ${ this.scientific_name.value }`;
+    const fishList2 = document.querySelector('#fish-ul');
+    fishList2.appendChild(newListItem2);
+
+  const newListItem3 = document.createElement('li');
+    newListItem3.textContent = `Environment: ${ this.environment.value }`;
+    const fishList3 = document.querySelector('#fish-ul');
+    fishList3.appendChild(newListItem3);
 
 };
