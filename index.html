@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UK Fish Species</title>
+    <script src="app.js"></script>
+  </head>
+  <body>
+
+<section>
+  <form class="main_form" action="index.html" method="post">
+
+  </form>
+</section>
+
+<form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="common_name" class="primary">Common Name:</label>
+          <input type="text" id="common_name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="scientific_name" class="primary">Scienific Name:</label>
+          <input type="text" id="scientific_name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="environment" class="primary">Category</label>
+          <select id="environment">
+            <option value="" disabled selected></option>
+            <option value="Sea">Sea</option>
+            <option value="Fresh Water">Fresh Water</option>
+            <option value="Migratory">Migratory</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit"  value="save this fish"/>
+    </form>
+
+    <section>
+      <h1>Fish List</h1>
+          <div id="fish-list"></div> 
+
+      <ul>
+      </ul>
+    </section>
+
+  </body>
+</html>
