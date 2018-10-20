@@ -35,9 +35,17 @@ const handleForm = function (event) {
 
 };
 
-// removes the whole ul, so we cant add another entry to the list once its been deleted.
 function clearList() {
-  console.log("TEST THE BUTTON");
-  let element = document.getElementById('fish-ul');
-  element.parentNode.removeChild(element);
+  let parent = document.querySelector('ul');
+  console.log("Parent:", parent);
+  let remElement = document.querySelectorAll('li')
+  console.log("li??? :", remElement);
+  remElement.forEach((child) => {parent.removeChild(child)
+  });
+  // let parent2 = document.querySelector('#fish-ul');
+  // console.log("Parent2:", parent2);
+  // let remHrElement = document.querySelectorAll('hr')
+  // console.log("hr??? :", remHrElement);
+  // remHrElement.forEach((child) => {parent.removeChild(child)
+  // });
 };
