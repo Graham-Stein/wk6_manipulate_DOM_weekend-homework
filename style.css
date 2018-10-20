@@ -6,7 +6,9 @@
 /* } */
 
 
+#new-item-form {
 
+}
 
 #form-wrapper{
   color: lightblue;
@@ -24,7 +26,8 @@
 }
 
 
-/* button {
-  color: hotpink;
+button {
+  color: lightblue;
+  background-color: teal;
   width: 170px;
-} */
+}

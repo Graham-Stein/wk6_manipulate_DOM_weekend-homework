@@ -19,7 +19,7 @@ const handleForm = function (event) {
   fishList0.appendChild(newListItem0);
 
   const newListItem = document.createElement('li');
-  newListItem.textContent = `Fish commonly known as: ${ this.common_name.value }`;
+  newListItem.textContent = `Common name: ${ this.common_name.value }`;
   const fishList = document.querySelector('#fish-ul');
   fishList.appendChild(newListItem);
 
