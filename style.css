@@ -1,0 +1,25 @@
+/* input, label, textarea, select, button {
+  width : 150px;
+  margin: 0;
+  box-sizing: border-box; */
+
+}
+
+#new-item-form {
+
+}
+
+#form-wrapper{
+  color: lightblue;
+  background-color: teal;
+  width : 170px;
+  margin: 20;
+  padding: 20;
+  box-sizing: border-box;
+  border-width: 5px;
+  border-style: groove;
+  border-color: blue;
+  border-radius: 20px;
+  padding: 10px; */
+  margin: 20px;
+}
