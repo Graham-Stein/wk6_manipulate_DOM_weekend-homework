@@ -7,28 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleForm = function (event) {
   event.preventDefault();
   console.log(event);
-  // ############ const newList = document.createElement('ul');
-  // const newParagraph = document.createElement('p');
-  //   newParagraph.textContent = `Fish is: ${ this.common_name.value },
-  //    aka ${ this.scientific_name.value }
-  //    environment(s): ${ this.environment.value }`;
-  //   const fishList = document.querySelector('#fish-list');
-  //   fishList.appendChild(newParagraph);
+  console.log(event.target[0]);
+  console.log(event.target[0].id);
+  console.log(event.target[0].value);
+  console.log(event.target[1]);
+  console.log(event.target[2]);
+
+
+  const newListItem0 = document.createElement('hr');
+  const fishList0 = document.querySelector('#fish-ul');
+  fishList0.appendChild(newListItem0);
 
   const newListItem = document.createElement('li');
-  // console.log(this.input.value);
-    newListItem.textContent = `Fish commonly known as: ${ this.common_name.value }`;
-    const fishList = document.querySelector('#fish-ul');
-    fishList.appendChild(newListItem);
+  newListItem.textContent = `Fish commonly known as: ${ this.common_name.value }`;
+  const fishList = document.querySelector('#fish-ul');
+  fishList.appendChild(newListItem);
 
   const newListItem2 = document.createElement('li');
-    newListItem2.textContent = `Scientific name: ${ this.scientific_name.value }`;
-    const fishList2 = document.querySelector('#fish-ul');
-    fishList2.appendChild(newListItem2);
+  newListItem2.textContent = `Scientific name: ${ this.scientific_name.value }`;
+  const fishList2 = document.querySelector('#fish-ul');
+  fishList2.appendChild(newListItem2);
 
   const newListItem3 = document.createElement('li');
-    newListItem3.textContent = `Environment: ${ this.environment.value }`;
-    const fishList3 = document.querySelector('#fish-ul');
-    fishList3.appendChild(newListItem3);
+  newListItem3.textContent = `Environment: ${ this.environment.value }`;
+  const fishList3 = document.querySelector('#fish-ul');
+  fishList3.appendChild(newListItem3);
 
+};
+
+// removes the whole ul, so we cant add another entry to the list once its been deleted.
+function clearList() {
+  console.log("TEST THE BUTTON");
+  let element = document.getElementById('fish-ul');
+  element.parentNode.removeChild(element);
 };
