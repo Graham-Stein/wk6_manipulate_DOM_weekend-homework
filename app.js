@@ -6,13 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const handleForm = function (event) {
   event.preventDefault();
-  // console.log(event);
-  // console.log(event.target[0]);
-  // console.log(event.target[0].id);
-  // console.log(event.target[0].value);
-  // console.log(event.target[1]);
-  // console.log(event.target[2]);
-
 
   const newListItem0 = document.createElement('hr');
   const fishList0 = document.querySelector('#fish-ul');
@@ -37,16 +30,12 @@ const handleForm = function (event) {
 
 function clearList() {
   let parent = document.querySelector('.fish-unordered-list ul');
-  // console.log("Parent:", parent);
   let remElement = document.querySelectorAll('.fish-unordered-list  li')
-  // console.log("li??? :", remElement);
   remElement.forEach((child) => {parent.removeChild(child)
   });
 
   let parent2 = document.querySelector('#fish-ul');
-  // console.log("Parent2:", parent2);
   let remHrElement = document.querySelectorAll('#fish-ul hr')
-  // console.log("hr??? :", remHrElement);
   remHrElement.forEach((child) => {parent.removeChild(child)
   });
 };
