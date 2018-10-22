@@ -6,13 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const handleForm = function (event) {
   event.preventDefault();
+  console.log(event);
+  console.log(event.target[0]);
+  console.log("0 ID", event.target[0].id);
+  console.log("0 Value ",event.target[0].value);
+  console.log("1 target ", event.target[1]);
+  console.log(event.target[2]);
+
+//  use the event.target etc to refactor the create element items below.
 
   const newListItem0 = document.createElement('hr');
   const fishList0 = document.querySelector('#fish-ul');
   fishList0.appendChild(newListItem0);
 
   const newListItem = document.createElement('li');
-  newListItem.textContent = `Common name: ${ this.common_name.value }`;
+  newListItem.textContent = `Fish commonly known as: ${ this.common_name.value }`;
   const fishList = document.querySelector('#fish-ul');
   fishList.appendChild(newListItem);
 
@@ -30,12 +38,16 @@ const handleForm = function (event) {
 
 function clearList() {
   let parent = document.querySelector('.fish-unordered-list ul');
+  console.log("Parent:", parent);
   let remElement = document.querySelectorAll('.fish-unordered-list  li')
+  console.log("li??? :", remElement);
   remElement.forEach((child) => {parent.removeChild(child)
   });
 
   let parent2 = document.querySelector('#fish-ul');
+  // console.log("Parent2:", parent2);
   let remHrElement = document.querySelectorAll('#fish-ul hr')
+  // console.log("hr??? :", remHrElement);
   remHrElement.forEach((child) => {parent.removeChild(child)
   });
 };
